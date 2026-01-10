@@ -18,9 +18,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return {
       redirect: {
         permanent: false,
-        destination: `${
-          endpoint.replace(/(\/graphql\/)/, "/") + encodeURI(path as string)
-        }`,
+        destination: `${endpoint.replace(/(\/graphql\/)/, "/") + encodeURI(path as string)
+          }`,
       },
     };
   }
@@ -101,10 +100,13 @@ const Post: React.FC<PostProps> = (props) => {
       </Head>
       <div className="post-container">
         <h1>{post.title}</h1>
-        <img
-          src={post.featuredImage.node.sourceUrl}
-          alt={post.featuredImage.node.altText || post.title}
-        />
+        {post.featuredImage?.node?.sourceUrl && (
+          <img
+            src={post.featuredImage.node.sourceUrl}
+            alt={post.featuredImage.node.altText || post.title}
+            style={{ maxWidth: '100%', height: 'auto' }}
+          />
+        )}
         <article dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
     </>
