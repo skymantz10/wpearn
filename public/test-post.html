@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Open Graph Meta Tags for Facebook -->
+  <meta property="og:title" content="TEST POST" />
+  <meta property="og:description" content="TEST
+" />
+  <meta property="og:image" content="https://blog.tapza.site/wp-content/uploads/default-image.jpg" />
+  <meta property="og:url" content="tapza.netlify.apptest-post.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Tapza" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TEST POST">
+  <meta name="twitter:description" content="TEST
+">
+  <meta name="twitter:image" content="https://blog.tapza.site/wp-content/uploads/default-image.jpg">
+  
+  <!-- Conditional redirect - only for human users, not bots -->
+  <script>
+    // Check if it's a bot/crawler
+    var userAgent = navigator.userAgent.toLowerCase();
+    var isCrawler = /bot|crawler|spider|facebookexternalhit|twitterbot|pinterest|whatsapp/i.test(userAgent);
+    
+    // Only redirect if NOT a crawler
+    if (!isCrawler) {
+      window.location.href = "https://blog.tapza.site/test-post/";
+    }
+  </script>
+  
+  <title>TEST POST</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: white;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TEST POST</h1>
+    <div class="content">
+      <p>TEST</p>
+
+    </div>
+  </div>
+</body>
+</html>
